@@ -142,6 +142,7 @@ function App() {
         const records = data.map(item => item)
         setArtRecords(records)
         setVisible(() => incrementVisible)
+        setItemList([])
       })
   }
 
