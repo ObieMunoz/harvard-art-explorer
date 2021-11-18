@@ -8,6 +8,7 @@ import DetailDisplay from './DetailDisplay';
 import Header from './Header';
 import About from './About'
 import DB_URL from './server'
+import Favorites from './Favorites';
 
 function App() {
   const [artInfo, setArtInfo] = useState([]);
@@ -164,6 +165,9 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/favorites">
+          <Favorites databaseRecords={databaseRecords} setArtRecords={setArtRecords} handleAddFavorite={handleAddFavorite} handleRemoveFavorite={handleRemoveFavorite} handleSetCurrentSelection={handleSetCurrentSelection} />
         </Route>
         <Route path="/">
           <Filter

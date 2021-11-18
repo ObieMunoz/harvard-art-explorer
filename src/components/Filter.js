@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList, setItemList, handleKeywordSearch, handleDisplayFavorites, databaseConnected }) {
     const [activeBtn, setActiveBtn] = useState("object")
@@ -20,7 +21,7 @@ function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList,
         }
         else if (selection === "object") resetItems()
         else if (selection === "search") return handleKeywordSearch(search)
-        else if (selection === "favorites") return handleDisplayFavorites()
+        else if (selection === "favorites") return null; //handleDisplayFavorites()
         else handleFilterClick(selection)
         setActiveBtn(() => selection)
         setSearch(() => "")
@@ -78,21 +79,21 @@ function Filter({ handleCategoryChange, handleFilterClick, resetItems, itemList,
                     onClick={e => onFilterClick(e)}
                     name="gallery"
                 >Gallery</button>
-                {databaseConnected ? <button
+                {databaseConnected ? <Link to="/favorites"><button
                     className={activeBtn === "favorites"
                         ? "ui positive button"
                         : "ui button"}
 
                     onClick={e => onFilterClick(e)}
                     name="favorites"
-                >Favorites</button> : null}
+                    id="favoriteBtn"
+                >Favorites</button></Link> : null}
             </div>
             <br /><br />
             <div className="ui four column grid">
                 {itemElements ? itemElements : null}
             </div>
         </>
-
     )
 }
 
