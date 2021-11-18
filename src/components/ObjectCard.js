@@ -35,9 +35,9 @@ function ObjectCard({ record, databaseConnected, databaseRecords, handleAddFavor
                 <div className="meta">
                     <span className="date">{record.objectdate}</span>
                 </div>
-                <div className="description">
+                {/* <div className="description">
                     {record.description}
-                </div>
+                </div> */}
             </div>
             <div className="extra content">
                 <div className="ui two buttons">
