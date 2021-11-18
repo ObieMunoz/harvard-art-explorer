@@ -1,12 +1,12 @@
-import { useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { useState } from 'react';
-import ObjectCard from './ObjectCard';
+import { useHistory, Link } from 'react-router-dom'
+import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid'
 import { BASE_URL, API_KEY } from './API'
+import ObjectCard from './ObjectCard';
 
 function Favorites({ databaseRecords, handleAddFavorite, handleRemoveFavorite, handleSetCurrentSelection, databaseConnected = true }) {
     const [favorites, setFavorites] = useState(null);
+    const history = useHistory();
 
     useEffect(() => {
         Promise.all(databaseRecords.map(id => fetch(`${BASE_URL}/object/${id}?apikey=${API_KEY}`)))
@@ -30,9 +30,7 @@ function Favorites({ databaseRecords, handleAddFavorite, handleRemoveFavorite, h
     return (
         <div>
             <br />
-            <Link to="/">
-                <button className="ui primary button">Go Back</button>
-            </Link>
+            <button className="ui primary button" onClick={() => history.goBack()}>Go Back</button>
             <h2
                 className="ui header">
                 <em>Showing {favorites?.length} Works</em>

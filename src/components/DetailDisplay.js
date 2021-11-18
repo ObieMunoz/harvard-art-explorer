@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function DetailDisplay({ record }) {
-    if (!record) return null;
+    const history = useHistory();
+    if (!record) history.goBack();
     const { primaryimageurl, title, description, classification, dated = "Unknown", objectnumber } = record;
 
     return (
@@ -16,9 +17,7 @@ function DetailDisplay({ record }) {
                 <div className="date"><strong>Date:</strong> {dated}</div>
                 <div className="objectnumber"><strong>Object Number:</strong> {objectnumber}</div>
             </div>
-            <Link to="/">
-                <button className="ui primary button">Go Back</button>
-            </Link>
+            <button className="ui primary button" onClick={() => history.goBack()}>Go Back</button>
         </div>
     )
 }

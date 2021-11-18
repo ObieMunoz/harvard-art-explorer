@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 function About() {
+    const history = useHistory();
+
     return (
         <div>
             <div className="ui raised segment" style={{ width: "50%", marginLeft: "auto", marginRight: "auto" }}>
@@ -24,9 +26,7 @@ function About() {
                     Report a Problem
                 </a>
                 <br /><br />
-                <Link to="/">
-                    <button className="ui primary button">Go Back</button>
-                </Link>
+                <button className="ui primary button" onClick={() => history.goBack()}>Go Back</button>
             </div>
         </div>
     )
