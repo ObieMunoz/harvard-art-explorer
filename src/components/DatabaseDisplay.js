@@ -19,7 +19,7 @@ function DatabaseDisplay({ databaseConnected }) {
                 For full functionality, you must connect to the database.
             </div>}
             {databaseConnected && hover && <div className="ui blue message">
-                Connection established successfully with json-server!
+                Connection established successfully with obie-harvard-backend@heroku!
             </div>}
         </div>
     )

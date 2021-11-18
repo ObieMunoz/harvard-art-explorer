@@ -5,7 +5,8 @@ import Filter from './Filter';
 import TopReturn from './TopReturn';
 import DetailDisplay from './DetailDisplay';
 import Header from './Header';
-const DB_URL = 'http://localhost:3000/saved_items'
+import DB_URL from './server'
+// const DB_URL = 'http://localhost:3000/saved_items'
 
 function App() {
   const incrementVisible = 16;
