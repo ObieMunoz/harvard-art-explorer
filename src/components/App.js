@@ -25,7 +25,6 @@ function App() {
       .then(dbData => {
         setDatabaseRecords(dbData.map(item => item.id))
         setDatabaseConnected(true)
-        console.log(dbData)
       })
       .catch(err => setDatabaseConnected(false))
 
