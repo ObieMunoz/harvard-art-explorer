@@ -18,7 +18,7 @@ function About() {
                         <i class="node js icon" style={{ fontSize: "3em" }}></i>
                     </div>
                     <div className="item">
-                        <img src="https://uploads.sitepoint.com/wp-content/uploads/2016/04/1461122387heroku-logo.jpg" style={{ position: "relative", top: "18px", height: "45px", filter: "grayscale(100%)" }} />
+                        <img src="https://uploads.sitepoint.com/wp-content/uploads/2016/04/1461122387heroku-logo.jpg" style={{ position: "relative", top: "18px", height: "45px", filter: "grayscale(100%)" }} alt="Heroku logo" />
                     </div>
                 </div>
                 <br />

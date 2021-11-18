@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { API_KEY, BASE_URL } from './API';
-import { Route, Switch, Link, useHistory } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import CardContainer from './CardContainer';
 import Filter from './Filter';
 import TopReturn from './TopReturn';
@@ -8,7 +8,6 @@ import DetailDisplay from './DetailDisplay';
 import Header from './Header';
 import About from './About'
 import DB_URL from './server'
-// const DB_URL = 'http://localhost:3000/saved_items'
 
 function App() {
   const [artInfo, setArtInfo] = useState([]);
@@ -163,11 +162,9 @@ function App() {
         <Route path="/detail">
           <DetailDisplay record={currentSelection} />
         </Route>
-
         <Route path="/about">
           <About />
         </Route>
-
         <Route path="/">
           <Filter
             handleCategoryChange={handleCategoryChange}
@@ -191,8 +188,6 @@ function App() {
           />
           <TopReturn />
         </Route>
-
-
       </Switch>
     </div>
   )
