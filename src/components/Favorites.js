@@ -1,4 +1,4 @@
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid'
 import { BASE_URL, API_KEY } from './API'
