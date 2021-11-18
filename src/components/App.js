@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 import { API_KEY, BASE_URL } from './API';
+import { Route, Switch, Link, useHistory } from 'react-router-dom'
 import CardContainer from './CardContainer';
 import Filter from './Filter';
 import TopReturn from './TopReturn';
 import DetailDisplay from './DetailDisplay';
 import Header from './Header';
+import About from './About'
 import DB_URL from './server'
 // const DB_URL = 'http://localhost:3000/saved_items'
 
 function App() {
-  const incrementVisible = 16;
   const [artInfo, setArtInfo] = useState([]);
+  const incrementVisible = 16;
   const [artRecords, setArtRecords] = useState([]);
   const [visible, setVisible] = useState(incrementVisible)
   const [itemList, setItemList] = useState([]);
@@ -149,34 +151,49 @@ function App() {
     setCurrentSelection(record)
   }
 
+
   const visibleRecords = artRecords.slice(0, visible)
 
   return (
     <div style={{ textAlign: "center" }}>
       <Header databaseConnected={databaseConnected} />
-      <Filter
-        handleCategoryChange={handleCategoryChange}
-        handleFilterClick={handleFilterClick}
-        resetItems={resetItems}
-        itemList={itemList}
-        setItemList={setItemList}
-        handleKeywordSearch={handleKeywordSearch}
-        handleDisplayFavorites={handleDisplayFavorites}
-        databaseConnected={databaseConnected}
-      />
+
       <br />
-      <DetailDisplay record={currentSelection} />
-      <CardContainer
-        artInfo={artInfo}
-        artRecords={visibleRecords}
-        handleNext={handleNext}
-        databaseConnected={databaseConnected}
-        databaseRecords={databaseRecords}
-        handleAddFavorite={handleAddFavorite}
-        handleRemoveFavorite={handleRemoveFavorite}
-        handleSetCurrentSelection={handleSetCurrentSelection}
-      />
-      <TopReturn />
+      <Switch>
+        <Route path="/detail">
+          <DetailDisplay record={currentSelection} />
+        </Route>
+
+        <Route path="/about">
+          <About />
+        </Route>
+
+        <Route path="/">
+          <Filter
+            handleCategoryChange={handleCategoryChange}
+            handleFilterClick={handleFilterClick}
+            resetItems={resetItems}
+            itemList={itemList}
+            setItemList={setItemList}
+            handleKeywordSearch={handleKeywordSearch}
+            handleDisplayFavorites={handleDisplayFavorites}
+            databaseConnected={databaseConnected}
+          />
+          <CardContainer
+            artInfo={artInfo}
+            artRecords={visibleRecords}
+            handleNext={handleNext}
+            databaseConnected={databaseConnected}
+            databaseRecords={databaseRecords}
+            handleAddFavorite={handleAddFavorite}
+            handleRemoveFavorite={handleRemoveFavorite}
+            handleSetCurrentSelection={handleSetCurrentSelection}
+          />
+          <TopReturn />
+        </Route>
+
+
+      </Switch>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import ObjectCard from './ObjectCard';
 import { nanoid } from 'nanoid'
+import { Link } from 'react-router-dom'
 
 function CardContainer({ artInfo, artRecords, handleNext, databaseConnected, databaseRecords, handleAddFavorite, handleRemoveFavorite, handleSetCurrentSelection }) {
     const artElements = artRecords?.map(record => {
@@ -12,6 +13,7 @@ function CardContainer({ artInfo, artRecords, handleNext, databaseConnected, dat
             handleAddFavorite={handleAddFavorite}
             handleRemoveFavorite={handleRemoveFavorite}
             handleSetCurrentSelection={handleSetCurrentSelection}
+
         />
     })
 
@@ -23,7 +25,9 @@ function CardContainer({ artInfo, artRecords, handleNext, databaseConnected, dat
                 <em>Showing {artRecords?.length} of {artInfo?.totalrecords} Works</em>
             </h2>
             <div className="ui four cards">
+                {/* <ObjectCard.Group> */}
                 {artElements}
+                {/* </ObjectCard.Group> */}
             </div>
             {artRecords?.length >= artInfo?.totalrecords
                 ? null

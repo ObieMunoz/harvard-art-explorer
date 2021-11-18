@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function ObjectCard({ record, databaseConnected, databaseRecords, handleAddFavorite, handleRemoveFavorite, handleSetCurrentSelection }) {
     if (record.primaryimageurl === undefined || record.primaryimageurl === null) return null;
@@ -7,14 +8,13 @@ function ObjectCard({ record, databaseConnected, databaseRecords, handleAddFavor
         if (databaseConnected) {
             if (databaseRecords.includes(record.id)) {
                 return (
-                    <div
-                        className="ui buttom attached button" onClick={() => handleRemoveFavorite(record.id)}>
+                    <div className="ui primary button" onClick={() => handleRemoveFavorite(record.id)}>
                         <i className="remove icon"></i>
                         Remove from Favorites
                     </div>)
             } else {
                 return (
-                    <div className="ui bottom attached button" onClick={() => handleAddFavorite(record)}>
+                    <div className="ui primary button" onClick={() => handleAddFavorite(record)}>
                         <i className="add icon"></i>
                         Add Favorite
                     </div>
@@ -25,18 +25,44 @@ function ObjectCard({ record, databaseConnected, databaseRecords, handleAddFavor
     }
 
     return (
+        // make this card Link to the detail page
         <div className="ui card">
-            <div className="image" onClick={() => handleSetCurrentSelection(record)}>
-                <img src={record.primaryimageurl} alt={record.title + " image"} />
+            <div className="image">
+                <img src={record.primaryimageurl} alt={record.title} />
             </div>
             <div className="content">
-                <h3 className="header">{record.title}</h3>
-                <div className="objectnumber"><strong>Object Number:</strong> {record.objectnumber}</div>
-                <div className="description">{record.classification}</div>
+                <div className="header">{record.title}</div>
+                <div className="meta">
+                    <span className="date">{record.objectdate}</span>
+                </div>
+                <div className="description">
+                    {record.description}
+                </div>
             </div>
-            <FavoriteButton />
-        </div>
+            <div className="extra content">
+                <div className="ui two buttons">
+                    <Link to={`/detail`} className="ui green button" onClick={() => handleSetCurrentSelection(record)}>
+                        <i className="info icon"></i>
+                        More Info
+                    </Link>
+                    <FavoriteButton />
+                </div>
+            </div>
+        </div >
 
+        // // <Link to="/detail">
+        // <div className="ui card">
+        //     <div className="image" onClick={() => handleSetCurrentSelection(record)}>
+        //         <img src={record.primaryimageurl} alt={record.title + " image"} />
+        //     </div>
+        //     <div className="content">
+        //         <h3 className="header">{record.title}</h3>
+        //         <div className="objectnumber"><strong>Object Number: </strong> {record.objectnumber}</div>
+        //         <div className="description">{record.classification}</div>
+        //     </div>
+        //     <FavoriteButton />
+        // </div>
+        // </Link>
     )
 }
 
