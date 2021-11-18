@@ -25,7 +25,7 @@ function Favorites({ databaseRecords, handleAddFavorite, handleRemoveFavorite, h
                 })
                 setFavorites(artElements);
             })
-    }, [databaseRecords])
+    }, [databaseRecords, handleAddFavorite, handleRemoveFavorite, handleSetCurrentSelection, databaseConnected])
 
     return (
         <div>
