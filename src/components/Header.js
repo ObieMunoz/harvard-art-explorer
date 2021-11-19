@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import hamExplorer from '../images/ham-explorer.png';
 import DatabaseDisplay from './DatabaseDisplay';
 import AboutButton from "./AboutButton";
