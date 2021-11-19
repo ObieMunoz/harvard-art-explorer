@@ -7,7 +7,7 @@ function DatabaseDisplay({ databaseConnected }) {
         <div
             className="ui label"
             style={{
-                position: 'fixed',
+                position: 'absolute',
                 top: '0',
                 left: '0'
             }}

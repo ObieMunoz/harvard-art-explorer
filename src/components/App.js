@@ -11,8 +11,8 @@ import DB_URL from './server'
 import Favorites from './Favorites';
 
 function App() {
-  const [artInfo, setArtInfo] = useState([]);
   const incrementVisible = 16;
+  const [artInfo, setArtInfo] = useState([]);
   const [artRecords, setArtRecords] = useState([]);
   const [visible, setVisible] = useState(incrementVisible)
   const [itemList, setItemList] = useState([]);
