@@ -26,7 +26,7 @@ function About() {
                     Report a Problem
                 </a>
                 <br /><br />
-                <a href="https://github.com/harvard-art-explorer/" target="_blank" rel="noopener noreferrer" className="ui primary button">
+                <a href="https://github.com/ObieMunoz/harvard-art-explorer/" target="_blank" rel="noopener noreferrer" className="ui primary button">
                     <i className="github icon"></i>
                     This Project on Github</a>
                 <br /><br />
