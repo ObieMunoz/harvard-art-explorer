@@ -33,7 +33,7 @@ function Favorites({ databaseRecords, handleAddFavorite, handleRemoveFavorite, h
             <button className="ui primary button" onClick={() => history.goBack()}>Go Back</button>
             <h2
                 className="ui header">
-                <em>Showing {favorites?.length} Works</em>
+                {favorites.length > 0 ? <em>Showing {favorites?.length} Works</em> : <em>No Favorites Saved. Please add more and come back!</em>}
             </h2>
             <div className="ui four cards">
                 {favorites}
