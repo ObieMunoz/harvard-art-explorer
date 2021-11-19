@@ -6,5 +6,8 @@ This project was completed during the full-time Software Engineering program at 
 
 The Harvard Museum of art can be found here: https://harvardartmuseums.org/collections
 
+### Technologies Used
+This project was developed using JavaScript, ReactJS, and deployed with a backend hosted in Heroku.
+
 ### Screenshot
 ![harvard-art-explorer-landing-page](https://raw.githubusercontent.com/ObieMunoz/harvard-art-explorer/main/src/images/ham-explorer-landing.jpeg)
