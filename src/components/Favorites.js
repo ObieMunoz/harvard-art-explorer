@@ -23,7 +23,7 @@ function Favorites({ databaseRecords, handleAddFavorite, handleRemoveFavorite, h
                         databaseRecords={databaseRecords}
                     />
                 })
-                setFavorites(artElements);
+                setFavorites(() => artElements);
             })
     }, [databaseRecords, handleAddFavorite, handleRemoveFavorite, handleSetCurrentSelection, databaseConnected])
 
@@ -33,7 +33,7 @@ function Favorites({ databaseRecords, handleAddFavorite, handleRemoveFavorite, h
             <button className="ui primary button" onClick={() => history.goBack()}>Go Back</button>
             <h2
                 className="ui header">
-                {favorites.length > 0 ? <em>Showing {favorites?.length} Works</em> : <em>No Favorites Saved. Please add more and come back!</em>}
+                {favorites === null ? null : favorites.length > 0 ? <em>Showing {favorites?.length} Works</em> : <em>No Favorites Saved. Please add more and come back!</em>}
             </h2>
             <div className="ui four cards">
                 {favorites}
