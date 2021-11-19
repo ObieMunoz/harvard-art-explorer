@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/harvard-art-explorer/static/css/main.7779f25d.chunk.css",
+    "main.js": "/harvard-art-explorer/static/js/main.f8a8379e.chunk.js",
+    "main.js.map": "/harvard-art-explorer/static/js/main.f8a8379e.chunk.js.map",
+    "runtime-main.js": "/harvard-art-explorer/static/js/runtime-main.ca662837.js",
+    "runtime-main.js.map": "/harvard-art-explorer/static/js/runtime-main.ca662837.js.map",
+    "static/css/2.daf09445.chunk.css": "/harvard-art-explorer/static/css/2.daf09445.chunk.css",
+    "static/js/2.72765589.chunk.js": "/harvard-art-explorer/static/js/2.72765589.chunk.js",
+    "static/js/2.72765589.chunk.js.map": "/harvard-art-explorer/static/js/2.72765589.chunk.js.map",
+    "index.html": "/harvard-art-explorer/index.html",
+    "static/css/2.daf09445.chunk.css.map": "/harvard-art-explorer/static/css/2.daf09445.chunk.css.map",
+    "static/css/main.7779f25d.chunk.css.map": "/harvard-art-explorer/static/css/main.7779f25d.chunk.css.map",
+    "static/js/2.72765589.chunk.js.LICENSE.txt": "/harvard-art-explorer/static/js/2.72765589.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/harvard-art-explorer/static/media/outline-icons.ddae9b1b.woff",
+    "static/media/ham-explorer.d67647c2.png": "/harvard-art-explorer/static/media/ham-explorer.d67647c2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ca662837.js",
+    "static/css/2.daf09445.chunk.css",
+    "static/js/2.72765589.chunk.js",
+    "static/css/main.7779f25d.chunk.css",
+    "static/js/main.f8a8379e.chunk.js"
+  ]
+}
