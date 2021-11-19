@@ -21,10 +21,14 @@ function About() {
                     </div>
                 </div>
                 <br />
-                <a href="https://github.com/ObieMunoz/phase-2-project/issues/new" target="_blank" rel="noopener noreferrer" className="ui red button">
+                <a href="https://github.com/ObieMunoz/harvard-art-explorer/issues/new" target="_blank" rel="noopener noreferrer" className="ui red button">
                     <i className="github icon"></i>
                     Report a Problem
                 </a>
+                <br /><br />
+                <a href="https://github.com/harvard-art-explorer/" target="_blank" rel="noopener noreferrer" className="ui primary button">
+                    <i className="github icon"></i>
+                    This Project on Github</a>
                 <br /><br />
                 <button className="ui primary button" onClick={() => history.goBack()}>Go Back</button>
             </div>
