@@ -76,6 +76,7 @@ function App() {
       .then(data => {
         const unsortedList = data.records;
         unsortedList.forEach(item => {
+          console.log(item)
           item.parentCategory = category;
         })
         const sortedList = unsortedList.sort((a, b) => {
