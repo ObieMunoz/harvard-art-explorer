@@ -9,6 +9,7 @@ import Header from './Header';
 import About from './About'
 import DB_URL from './server'
 import Favorites from './Favorites';
+import Footer from './Footer';
 
 function App() {
   const incrementVisible = 16;
@@ -193,6 +194,7 @@ function App() {
           <TopReturn />
         </Route>
       </Switch>
+      <Footer />
     </div>
   )
 }
