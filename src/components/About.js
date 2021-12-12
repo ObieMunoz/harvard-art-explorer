@@ -7,7 +7,7 @@ function About() {
         <div>
             <div className="ui raised segment" style={{ width: "50%", marginLeft: "auto", marginRight: "auto" }}>
                 <h1 className="ui header">About</h1>
-                <p>This application was developed during the full-time Software Engineering course at the Flatiron School. The application was created to help users explore the Harvard Museum of Art and remotely view objects in their collection.</p>
+                <p>This application was developed by Obie Munoz, Terence Stephens, and Chris Valle during the full-time Software Engineering course at the Flatiron School. The application was created to help users explore the Harvard Museum of Art and remotely view objects in their collection.</p>
                 <p>The application was created with the following technologies:</p>
                 <div className="ui horizontal list">
                     <div className="item">
